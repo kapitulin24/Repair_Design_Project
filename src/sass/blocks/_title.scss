@@ -1,0 +1,18 @@
+.title {
+    font-family: Yeseva One;
+    font-size: rem(20);
+    line-height: rem(28);
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    &_black {
+        color: #181818;
+    }
+    &_big {
+        font-size: rem(27);
+        line-height: rem(37);
+        letter-spacing: -0.07em;
+
+        color: $main-color;
+    }
+}

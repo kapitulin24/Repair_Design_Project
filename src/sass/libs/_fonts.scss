@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'FuturaBookC';
+    src: local('FuturaBookC'), local('Futura Book C'),
+        url('../fonts/FuturaBookC_Regular/futurabookc.woff2') format('woff2'),
+        url('../fonts/FuturaBookC_Regular/futurabookc.woff') format('woff'),
+        url('../fonts/FuturaBookC_Regular/futurabookc.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yeseva One';
+    src: local('Yeseva One'), local('YesevaOne'), 
+        url('../fonts/Yeseva_One_Regular/yesevaone.woff2') format('woff2'),
+        url('../fonts/Yeseva_One_Regular/yesevaone.woff') format('woff'),
+        url('../fonts/Yeseva_One_Regular/yesevaone.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaDemiC';
+    src: local('FuturaDemiC'), local('Futura Demi C'), 
+        url('../fonts/FuturaDemiC_Regular/futurademic.woff2') format('woff2'),
+        url('../fonts/FuturaDemiC_Regular/futurademic.woff') format('woff'),
+        url('../fonts/FuturaDemiC_Regular/futurademic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaMediumC';
+    src: local('FuturaMediumC'), local('Futura Medium C'), 
+        url('../fonts/FuturaMediumC_Regular/futuramediumc.woff2') format('woff2'),
+        url('../fonts/FuturaMediumC_Regular/futuramediumc.woff') format('woff'),
+        url('../fonts/FuturaMediumC_Regular/futuramediumc.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: local('Proxima Nova Regular'), local('Proxima-Nova-Regular'),
+        url('../fonts/Proxima_Nova_Regular/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/Proxima_Nova_Regular/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/Proxima_Nova_Regular/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaDemiC-Italic';
+    src: local('FuturaDemiC-Italic'), local('Futura Demi C-Italic'), 
+        url('../fonts/FuturaDemiC_Italic/futurademic-italic.woff2') format('woff2'),
+        url('../fonts/FuturaDemiC_Italic/futurademic-italic.woff') format('woff'),
+        url('../fonts/FuturaDemiC_Italic/futurademic-italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}

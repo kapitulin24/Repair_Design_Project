@@ -1,0 +1,31 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/fonts';
+@import 'libs/slick';
+@import 'base/variables';
+@import 'base/functions';
+
+* {
+    font-family: 'FuturaBookC';
+    font-size: 15px;
+    line-height: rem(25);
+    color: #FFFFFF;    
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p, ul {
+    margin: 0;
+}
+
+.container {
+    width: 1238px;
+    margin: 0 auto;
+}
+
+@import 'blocks/title';
+@import 'blocks/btn';
+@import 'blocks/fz-14';
+@import 'blocks/sidepanel';
+@import 'blocks/header';
+//media
