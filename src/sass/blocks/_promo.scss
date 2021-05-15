@@ -1,8 +1,8 @@
 .promo {
-    min-height: 707px;
     --margin-left-bg: calc((100vw - var(--container-width) - 17px) / 2);
+    min-height: 707px;
     padding: 147px 0 208px 0;    
-    background: url(../img/bg_promo.jpg) no-repeat var(--margin-left-bg) top/ calc(100% - var(--margin-left-bg));
+    background: url(../img/bg_promo.jpg) no-repeat var(--margin-left-bg) top/ contain;
     background-color: #131313;
     &__wrapper {
         width: rem(580);
