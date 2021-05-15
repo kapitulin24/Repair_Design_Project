@@ -1,0 +1,27 @@
+.scroll-down {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 247px;
+    height: 97px;
+    bottom: 0;
+    left: 0;
+    background-color: #131313;
+    z-index: 10;
+    &:hover {
+        cursor: pointer;
+    }
+    span {
+        font-family: Yeseva One;
+        text-transform: uppercase;
+    }
+    &__arrow {
+        border: 1.5px solid $main-color;
+        border-radius: 50%;
+        width: 29px;
+        height: 29px;
+        background: url('../icons/arrow_cc.svg') no-repeat calc(50% - 1px) 50%/ 50% 50%;
+    }
+}

@@ -12,6 +12,10 @@
     margin: 0;
     padding: 0;    
     box-sizing: border-box;
+    
+}
+html {
+    --container-width: 1238px;
 }
 
 h1, h2, h3, h4, p, ul {
@@ -19,7 +23,7 @@ h1, h2, h3, h4, p, ul {
 }
 
 .container {
-    width: 1238px;
+    width: var(--container-width);
     margin: 0 auto;
 }
 
@@ -27,5 +31,7 @@ h1, h2, h3, h4, p, ul {
 @import 'blocks/btn';
 @import 'blocks/fz-14';
 @import 'blocks/sidepanel';
+@import 'blocks/scroll-down';
 @import 'blocks/header';
+@import 'blocks/promo';
 //media

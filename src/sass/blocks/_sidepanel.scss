@@ -1,3 +1,19 @@
 .sidepanel {
     position: fixed;
+    transform: rotate(90deg) translateX(-150%);
+    top: 50%;
+    a {
+        font-family: FuturaDemiC;
+        color: $main-color;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 51px;
+            height: 2px;
+            background-color: $main-color;
+            top: 50%;
+            transform: translateY(-50%);
+            left: calc(100% + 8px);
+        }
+    }
 }
