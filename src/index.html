@@ -59,9 +59,11 @@
             <div class="projects__tabs">
                 <div class="projects__nav">
                     <div class="projects__nav-left"></div>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
+                    <div class="projects__dots">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <div class="projects__nav-right"></div>
                 </div>
                 <ul class="projects__tabs-name">
@@ -155,6 +157,34 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="control">
+        <h2 class="title control__title">online control</h2>
+        <div class="control__ico"></div>
+        <div class="control__video">
+                <div class="control__video-play">
+                    <img src="icons/Play.svg" alt="play">
+                </div>
+        </div>
+        <div class="control__divider"></div>
+        <div class="control__descr">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities!<br> Leave a request below and you will receive a link to the broadcast.</div>
+        <form action="#" class="control__form">
+            <div class="control__input">
+                <input name="name" id="name" type="text" placeholder="What is your name:">
+                <label for="name">Name</label>
+            </div>
+            <div class="control__input">
+                <input name="phone" id="phone" placeholder="Your phone number:">
+                <label for="phone">Phone</label>
+            </div>
+            <div class="control__trigger">
+                <button class="control__btn btn" >Submit</button>
+                <div class="control__processing-personal-data">
+                    <input name="personal-data" type="checkbox">
+                    <label>I agree to the processing of personal data</label>
+                </div>
+            </div>
+        </form>
     </section>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

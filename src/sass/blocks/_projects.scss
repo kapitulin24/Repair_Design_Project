@@ -97,10 +97,33 @@
     }
     &__nav {
         position: absolute;
+        bottom: 0;
+        display: flex;
+        &-left {
+            width: 42px;
+            height: 24px;
+            background: url('../icons/arrows/arrow.svg') no-repeat calc(50% - 1px);
+            margin-right: 29px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &-right {
+            width: 42px;
+            height: 24px;
+            transform: rotate(180deg);
+            background: url('../icons/arrows/arrow.svg') no-repeat calc(50% - 1px);
+            margin-left: 29px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+    }
+    &__dots {
         display: flex;
         gap: 18px;
         align-items: center;
-        bottom: 0;
         span {
             display: block;
             width: 10px;
@@ -117,26 +140,6 @@
                 }
             }
         }
-        &-left {
-            width: 42px;
-            height: 24px;
-            background: url('../icons/arrow.svg') no-repeat calc(50% - 1px);
-            margin-right: 11px;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        &-right {
-            width: 42px;
-            height: 24px;
-            transform: rotate(180deg);
-            background: url('../icons/arrow.svg') no-repeat calc(50% - 1px);
-            margin-left: 11px;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        
     }
 }
 .slick-slide {
