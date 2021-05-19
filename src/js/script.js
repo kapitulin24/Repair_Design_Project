@@ -42,18 +42,21 @@ $(document).ready(function(){
             e.classList.remove('active');
         });
     };
+
     //добаление классов активности к точке, табу и контенту таба
     function showContentTabs(i) {
         contentTabs[i].classList.add('projects__content_active');
         tabWrap[i].classList.add('projects__tab_active');
         dot[i].classList.add('active');
     };
+
     //операции выполняемые после каждой смены таба
     function clickEvent(i, slider) {
         hideContentTabs();
         showContentTabs(i);
         reloadSlider(slider);
     };
+
     //алгоритм после клика на таб или точку
     function clicker(elem, j, slider) {
         const target = elem.target;
@@ -65,6 +68,7 @@ $(document).ready(function(){
             });            
         }
     };
+
     //поиск индекса активного таба(для клика на стрелки)
     let index;
     function findIndex() {
@@ -74,14 +78,17 @@ $(document).ready(function(){
             }
         })
     };
+
     //клик на точку
     dots.addEventListener('click', (elem) => {
         clicker(elem, dot, '.project__preview-slider');
     });
+
     //клик на таб
     tabs.addEventListener('click', (elem) => {
         clicker(elem, tab, '.project__preview-slider');
     });
+
     //клик стрелка влево
     arrowLeft.addEventListener('click', () => {
         findIndex();
@@ -89,6 +96,7 @@ $(document).ready(function(){
         if (index < 0) {index = dot.length-1;}
         clickEvent(index, '.project__preview-slider');
     });
+
     //клик стрелка вправо
     arrowRight.addEventListener('click', () => {
         findIndex();
@@ -155,17 +163,20 @@ $(document).ready(function(){
     //end WOW
 
     //start modal
+
     //open
     $('#request-h, #request-f').on('click', function() {
 		$('.overlay, #modal').fadeIn();
         document.querySelector('body').style.overflow = 'hidden';
 	});
+
     //close
     $('.modal__close').on('click', function() {
 		$('.overlay, #modal').fadeOut();
         document.querySelector('body').style.overflow = 'visible';
 	});
     //end modal
+
     //start footer
     window.addEventListener('scroll', function() {        
         if (document.documentElement.scrollTop > 100) {
@@ -173,6 +184,7 @@ $(document).ready(function(){
         } else {document.querySelector('footer').style.position = 'static';}
       });
     //end footer
+    
     //smooth scroll
     $("a[href^='#']").click(function(){
         const _href = $(this).attr("href");
