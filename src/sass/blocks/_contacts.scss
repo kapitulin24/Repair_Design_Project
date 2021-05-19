@@ -1,0 +1,63 @@
+.contacts {
+    margin-bottom: 83px;
+    text-align: center;
+    padding-top: 275px;
+    min-height: 954px;
+    background: url(../img/contacts/contacts-bg.jpg) no-repeat left top /100% 100%;
+
+    &__title {
+        margin: 0 auto;
+        width: 589px;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(20);
+        line-height: rem(28);
+        text-transform: uppercase;
+        color: $main-color;
+
+        a {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: rem(20);
+            line-height: rem(28);
+            text-transform: uppercase;
+            color: $main-color;
+        }
+
+    }
+
+    &__wrapper {
+        margin-top: 26px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    &__post {
+        width: 28px;
+        height: 28px;
+        background: $main-color;
+        border-radius: 50%;
+    }
+
+    &__instagram {
+        width: 28px;
+        height: 28px;
+        background: $main-color;
+        border-radius: 50%;
+    }
+
+    &__map {
+        margin-top: 43px;
+
+        iframe {
+            border: none;
+            width: 925px;
+            height: 425px;
+        }
+
+    }
+    
+}

@@ -1,0 +1,164 @@
+.repair {
+    padding-top: 203px;
+
+    &__title {
+        color: #181818;
+    }
+
+    &__ico {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 13px;
+        max-width: 28px;
+        height: 28px;
+        background: url('../icons/repair.svg') no-repeat;
+        @include before-after-line;
+    }
+
+    &__cards-wrapper {
+        margin-top: 31px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bottom-wrapper {
+        margin-top: 120px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__left-block {
+        position: absolute;
+        width: 1006px;
+        height: 645px;
+        left: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 55px;
+            left: -157px;
+            width: 636px;
+            height: 636px;
+            border-radius: 50%;
+            z-index: -10;
+            @include border-gradient(white, #E2B873);
+        }
+
+        &-circle {            
+
+            &-bg {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background: url('../img/repair/bg_circle.png') no-repeat top left/ contain;
+            }
+            &-list {
+                list-style-type: none;
+                counter-reset: listCounter;
+                margin-top: 100px;                
+                margin-left: 320px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+
+                    &:nth-child(2) {
+                        margin-top: 42px;
+                        margin-left: 75px;
+                    }
+
+                    &:nth-child(3) {
+                        margin-top: 93px;
+                        margin-left: 100px;
+                    }
+
+                    &:nth-child(4) {
+                        margin-top: 93px;
+                        margin-left: 30px;
+                    }
+
+                    span {
+                        position: relative;
+                        z-index: 10;
+                        max-width: 365px;
+                        font-family: FuturaMediumC;
+                        font-size: rem(18);
+                        line-height: rem(21);
+                        color: #363636;
+                    }
+
+                    &:before {
+                        counter-increment: listCounter;
+                        content: "0" counter(listCounter);
+                        font-family: Yeseva One;
+                        font-size: rem(18);
+                        color: #FFFFFF;
+                        position: relative;
+                        z-index: 10;
+                        left: 45px;
+                    }
+                }
+            }
+
+            &-small {            
+                width: 70px;
+                height: 70px;
+                min-width: 70px;
+                border-radius: 50%;
+                background-color: white;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: $main-color;
+                    z-index: 1;
+                }
+
+            }
+
+        }
+
+    }
+    &__right-block-economy {
+        margin-top: 38px;
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        &-ico {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: $main-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-descr {
+            font-family: FuturaDemiC;
+            font-size: rem(20);
+            color: $main-color;
+            text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+            width: 360px;
+        }
+
+    }
+
+}
+
+div.repair__right-block-modal {
+    position: static;
+    margin-top: 76px;
+}

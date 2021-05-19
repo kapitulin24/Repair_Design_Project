@@ -1,11 +1,15 @@
 $(document).ready(function(){
-
+    //const
+    const srcYouTube = 'https://www.youtube.com/embed/oRkliX6zs4Y?autoplay=1',
+          srcSliderArrow = 'icons/arrows/arrow_cw.svg',
+          allowYouTube = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    
     //start slick section project
     function startSlider(slider) {
         $(slider).slick({
             speed: 750,
             variableWidth: true,
-            nextArrow: '<button type="button" class="slick-next"><img src="icons/arrows/arrow_cw.svg" alt=""></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="' + srcSliderArrow + '" alt=""></button>',
         });
     }
     startSlider('.project__preview-slider');
@@ -98,8 +102,81 @@ $(document).ready(function(){
     $('div.control__video-play').on('click', function() {
         let player = document.querySelector('div.control__video');
         let playBtn = document.querySelector('div.control__video-play');
-        player.insertAdjacentHTML('afterbegin', '<iframe src="https://www.youtube.com/embed/oRkliX6zs4Y?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        player.insertAdjacentHTML('afterbegin', '<iframe src="' + srcYouTube + '" title="YouTube video player" frameborder="0" allow="' + allowYouTube + '" allowfullscreen></iframe>');
         playBtn.style.display = "none";
     });
     //end video play
+
+    //start validation
+    function valideForms(form) {
+        $(form).validate({
+            focusCleanup: true,
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 22
+                },
+                email: {
+                    required: true,
+                    email: true
+                  },
+                policy: "required",
+                phone: "required"
+            },
+            messages: {
+                name: {
+                    required: "Please, enter your name",
+                },
+                phone: {
+                    required: "Please, enter your phone"
+                },
+                email: {
+                    required: "Please, enter your E-mail",
+                    email: "Incorrect E-Mail Address"
+                  },
+                policy: {
+                    required: "You must consent to the processing of data"
+                }
+            }
+        });
+    }
+    valideForms('form.repair__right-block-modal-form');
+    valideForms('form.control__form');
+    valideForms('form.modal__form');
+    //end validation
+
+    //start WOW
+	new WOW({
+		animateClass: 'animate__animated',
+        offset: 0,
+	   	resetAnimation: false
+   }).init();
+    //end WOW
+
+    //start modal
+    //open
+    $('#request-h, #request-f').on('click', function() {
+		$('.overlay, #modal').fadeIn();
+        document.querySelector('body').style.overflow = 'hidden';
+	});
+    //close
+    $('.modal__close').on('click', function() {
+		$('.overlay, #modal').fadeOut();
+        document.querySelector('body').style.overflow = 'visible';
+	});
+    //end modal
+    //start footer
+    window.addEventListener('scroll', function() {        
+        if (document.documentElement.scrollTop > 100) {
+            document.querySelector('footer').style.position = 'fixed';
+        } else {document.querySelector('footer').style.position = 'static';}
+      });
+    //end footer
+    //smooth scroll
+    $("a[href^='#']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+	});
 });

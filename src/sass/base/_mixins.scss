@@ -1,0 +1,38 @@
+@mixin before-after-line {
+    &:after {
+        content: '';
+        position: absolute;
+        width: rem(32);
+        height: 1px;
+        left: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $main-color;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: rem(32);
+        height: 1px;
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $main-color;
+    }    
+}
+
+@mixin border-gradient($from, $to, $weight: 0) {
+    $mix-main: mix($from, $to);
+    $mix-sub-from: mix($mix-main, $from);
+    $mix-sub-to: mix($mix-main, $to);
+    
+    box-shadow: 
+                0 3px 0 $weight rgba($mix-sub-to, .3),
+                0 -3px 0 $weight rgba($mix-sub-from, .3),
+                3px 0 0 $weight rgba($mix-sub-to, .5),
+                -3px 0 0 $weight  rgba($mix-sub-from, .5),
+                3px -3px 0 $weight rgba($mix-main, .7),
+                -3px 3px 0 $weight rgba($mix-main, .7),
+                3px 3px 0 $weight rgba($to, 1),
+                -3px -3px 0 $weight rgba($from, 1);
+}

@@ -3,12 +3,14 @@
 @import 'libs/slick';
 @import 'base/variables';
 @import 'base/functions';
+@import 'base/mixins';
+@import 'base/animations';
 
 * {
     font-family: 'FuturaBookC';
     font-size: 15px;
     line-height: rem(25);
-    color: #FFFFFF;    
+    color: #FFF;    
     margin: 0;
     padding: 0;    
     box-sizing: border-box;
@@ -31,9 +33,15 @@ h1, h2, h3, h4, p, ul {
 @import 'blocks/btn';
 @import 'blocks/fz-14';
 @import 'blocks/sidepanel';
-@import 'blocks/scroll-down';
-@import 'blocks/header';
+@import 'blocks/header-footer';
 @import 'blocks/promo';
 @import 'blocks/projects';
 @import 'blocks/control';
+@import 'blocks/big-bg';
+@import 'blocks/cards';
+@import 'blocks/repair';
+@import 'blocks/modal';
+@import 'blocks/checkbox';
+@import 'blocks/contacts';
+@import 'blocks/overlay';
 //media

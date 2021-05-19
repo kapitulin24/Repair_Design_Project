@@ -9,4 +9,22 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    &:hover {
+        filter:hue-rotate(50deg);
+        transition: all 0.5s;
+    }
+
+    &_clear:hover {
+        
+        &:after {
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            animation: btn 0.5s forwards;
+        }
+        
+    }
 }

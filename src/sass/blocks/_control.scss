@@ -2,38 +2,22 @@
     --ctrl-mt: -324px;
     text-align: center;
     margin-top: var(--ctrl-mt);
+
     &__title {
         position: relative;
     }
+
     &__ico {
         position: relative;
-        margin-top: rem(13);
+        margin-top: 13px;
         max-width: 33px;
         height: 28px;
         left: 50%;
         transform: translateX(-50%);
         background: url('../icons/camera.svg') no-repeat;
-        &:after {
-            content: '';
-            position: absolute;
-            width: rem(32);
-            height: 1px;
-            left: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: $main-color;
-        }
-        &:before {
-            content: '';
-            position: absolute;
-            width: rem(32);
-            height: 1px;
-            right: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: $main-color;
-        }
+        @include before-after-line;
     }
+
     &__video {
         margin: 0 auto;
         position: relative;
@@ -41,10 +25,12 @@
         width: 772px;
         height: 434px;
         background: url(../img/control/preview_video.jpg) no-repeat center/ cover;
+
         iframe {
             width: 100%;
             height: 100%;
         }
+
         &-play {
             position: absolute;
             display: flex;
@@ -58,16 +44,21 @@
             width: 85px;
             height: 85px;
             border-radius: 50%;
+
             img {
                 width: 28px;
                 height: 28px;
                 transform: translateX(10%);
             }
+
             &:hover {
                 cursor: pointer;
             }
+
         }
+
     }
+
     &__divider {
         margin: 0 auto;
         margin-top: 63px;
@@ -75,15 +66,17 @@
         height: 2px;
         background-color: $main-color;
     }
+    
     &__descr {
         margin: 0 auto;
         margin-top: 34px;
         width: 681px;
         font-family: FuturaBookC;
-        font-size: 20px;
-        line-height: 34px;
+        font-size: rem(20);
+        line-height: rem(34);
         color: #363636;
     }
+
     &__form {
         position: relative;
         margin-top: 91px;
@@ -92,79 +85,65 @@
         align-items: center;
         gap: 58px;
     }
+
     &__btn {
         font-size: rem(15);
         line-height: rem(26);
         width: 200px;
         height: 51px;
     }
+
     &__input {
         width: 231px;
         position: relative;
+
         label {
             position: absolute;
-            line-height: 20px;
+            line-height: rem(20);
             color: rgba(54, 54, 54, 0.5);
             top: 0;
             left: 0;
             transform: translateY(-100%);
         }
+
         input {
             border: none;
             border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-            font-size: 18px;
+            font-size: rem(18);
+            line-height: rem(24);
             width: 100%;
-            line-height: 24px;
             color: #363636;
             padding-bottom: 4px;
+
             &:focus {
                 outline: none;
             }
+
             &::placeholder {
-                font-size: 18px;
-                line-height: 24px;
+                font-size: rem(18);
+                line-height: rem(24);
                 color: #363636;
             }
+
         }
+
     }
+
     &__processing-personal-data {
         position: absolute;
         bottom: -39px;
         left: 50%;
-        transform: translateX(-50%);
-        input {
-            width: 25px;
-            height: 25px; 
-            position: absolute;
-            z-index: 10;
-            opacity: 0;
-            &:checked+label::before {
-                border: none;
-                background-color: $main-color;
-                background-image: url('../icons/check.svg');
-              }
-        }
+        transform: translate(-50%, 50%);
+
         label {
-            display: inline-flex;
-            align-items: center;
+            position: absolute;
+            color: red;
+            opacity: 0.8;
             user-select: none;
-            font-size: 16px;
-            line-height: 22px;
-            color: #181818;
-            &:before {
-                content: '';
-                display: inline-block;
-                width: 18px;
-                height: 18px;                
-                margin-right: 9px;
-                flex-shrink: 0;
-                flex-grow: 0;
-                border: 1px solid #adb5bd;
-                border-radius: 1px;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: 60% 60%;
-            }
+            right: -271px;
+
         }
+        
     }
+
 }

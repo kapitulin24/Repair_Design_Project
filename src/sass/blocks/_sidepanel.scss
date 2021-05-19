@@ -3,9 +3,11 @@
     transform: rotate(90deg) translateX(-150%);
     top: 50%;
     z-index: 100;
+
     a {
         font-family: FuturaDemiC;
         color: $main-color;
+
         &:after {
             content: '';
             position: absolute;
@@ -16,5 +18,7 @@
             transform: translateY(-50%);
             left: calc(100% + 8px);
         }
+
     }
+    
 }

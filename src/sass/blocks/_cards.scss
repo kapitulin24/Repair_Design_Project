@@ -1,0 +1,73 @@
+.card {
+    position: relative;
+    width: 392px;
+
+    &__preview {
+        position: absolute;
+        img {
+            width: 392px;
+            height: 421px;
+            object-fit: cover;
+        }
+    }
+
+    &__descr {
+        padding: 25px 32px 49px 32px;
+        margin: 0 auto;
+        margin-top: 294px;
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        z-index: 10;
+
+        &_w330 {
+            width: 330px;
+        }
+
+        &_w233 {
+            width: 233px;
+        }
+
+    }
+
+    &__title {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(18);
+        color: #363636;
+    }
+
+    &__subtitle {
+
+        ul {
+            margin-left: 17px;            
+            margin-top: 13px;
+
+            li {
+                color: #959595;
+            }
+
+        }
+
+    }
+    
+    &__price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 228px;
+        height: 54px;
+        bottom: 0;
+        left: 0;
+        transform: translateY(50%);
+        background-color: $main-color;
+        font-family: Yeseva One;
+        font-size: rem(18);
+        line-height: rem(25);
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    
+}
